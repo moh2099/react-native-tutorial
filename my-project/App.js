@@ -27,7 +27,7 @@ export default function App() {
         keyExtractor={(item) => item.id} 
         data={people} 
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => pressHandler(item.id)}>
+          <TouchableOpacity onPress={() => pressHandler(item.id)}> {/* TouchableOpacity component let's you change the opacity of touched elemnt in the app */}
             <Text style={styles.item}>{item.name}</Text>
           </TouchableOpacity>
         )}
