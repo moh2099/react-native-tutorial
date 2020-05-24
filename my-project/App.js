@@ -14,7 +14,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-
+      {/*
+      
+        Note: FLatList is better than mapping people const (people.map(item => { return (jsx ELement) })) 
+        beacuse it needs to be wrapped by <ScrollView> </ScrollView> and also it has some performance issue
+        as the this will render all the elemnts in contrast to <FlatList /> where the elements are renderd as you scroll down
+        
+        */}
       <FlatList 
         numColumns={2}
         keyExtractor={(item) => item.id} 
