@@ -22,14 +22,21 @@ export default function App() {
         where the elements are renderd as you scroll down in the app
         
         */}
-      <FlatList 
+      <FlatList
         numColumns={2}
-        keyExtractor={(item) => item.id} 
-        data={people} 
-        renderItem={({ item }) => ( 
+        keyExtractor={(item) => item.id}
+        data={people}
+        renderItem={({ item }) => (
           <Text style={styles.item}>{item.name}</Text>
         )}
       />
+      {/*
+        
+        Note: this FlatList component automatically checks the key in each item in the people object item: { name: 'asd', key: '53' },
+        however if you want to identify another key if key property is not found you may use keyExtractor prop in the FlatList component,
+        this in case that each item looks like this item: { name: 'asd', id: '53' }
+
+        */}
 
     </View>
   );
