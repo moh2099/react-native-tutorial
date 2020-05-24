@@ -23,7 +23,7 @@ export default function App() {
         
         */}
       <FlatList
-        numColumns={2}
+        numColumns={2} //splits data on columns, you may need to update some style to make it looks better such as marginHorizontal
         keyExtractor={(item) => item.id}
         data={people}
         renderItem={({ item }) => (
